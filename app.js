@@ -15,7 +15,14 @@ app.set("views","./src/views");
 app.set("view engine", "ejs");
 
 productRouter.route("/").get((req,res) => {
-    res.send("Hello Products");
+    res.render("products", {
+        products: [
+            {productTitle: 'ซีพียู', productDescription: 'ซีพียูยี่ห้อ 1 ดีมาก', productPrice: 10000},
+            {productTitle: 'ซีพียู 2', productDescription: 'ซีพียูยี่ห้อ 2 ดีมาก', productPrice: 11000},
+            {productTitle: 'ซีพียู 3', productDescription: 'ซีพียูยี่ห้อ 3 ดีมาก', productPrice: 12000},
+            {productTitle: 'ซีพียู 4', productDescription: 'ซีพียูยี่ห้อ 4 ดีมาก', productPrice: 13000},
+        ],
+    });
 });
 productRouter.route("/1").get((req,res) => {
     res.send("Hello Products1");
@@ -24,6 +31,12 @@ productRouter.route("/1").get((req,res) => {
 app.use('/products', productRouter)
 
 app.get("/",(req, res) => {
+
+    res.render('index');
+
+})
+
+app.get("/index.html",(req, res) => {
 
     res.render('index');
 

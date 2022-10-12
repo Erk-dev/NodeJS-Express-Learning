@@ -1,5 +1,5 @@
-{
-    "products": [
+
+[
       {
         "id": 0,
         "productTitle": "ซีพียู",
@@ -30,5 +30,4 @@
         "productDescription": "ซีพียูยี่ห้อ 5 ดีมาก",
         "productPrice": 14000
       }
-    ]
-  }
+]
